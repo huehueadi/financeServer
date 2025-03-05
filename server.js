@@ -27,7 +27,7 @@ app.use(express.json());
 app.use('/api/users', userRoutes);
 app.use('/api/transactions', transactionRoutes);
 app.use('/api/budgets', budgetRoutes);
-app.get('/', ()=>{
+app.get('/', (req, res)=>{
   res.send("Server started")
 })
 
