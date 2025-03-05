@@ -27,6 +27,9 @@ app.use(express.json());
 app.use('/api/users', userRoutes);
 app.use('/api/transactions', transactionRoutes);
 app.use('/api/budgets', budgetRoutes);
+app.get('/', ()=>{
+  res.send("Server started")
+})
 
 // Error handling middleware
 app.use((err, req, res, next) => {
